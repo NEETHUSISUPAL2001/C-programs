@@ -1,0 +1,28 @@
+#include<stdio.h>
+void main()
+{
+int a[100],num,i,j,temp;
+clrscr();
+printf("enter the limits:");
+scanf("%d",&num);
+printf("enter the array elements:");
+for(i=0;i<num;i++)
+scanf("%d",&a[i]);
+for(i=0;i<num-1;i++)
+{
+for(j=0;j<num-i-1;j++)
+{
+if(a[j]>a[j+1])
+{
+temp=a[j];
+a[j]=a[j+1];
+a[j+1]=temp;
+}
+}
+}
+printf("ordered list in ascending order:");
+for(i=0;i<num;i++)
+printf("%d\t",a[i]);
+printf("\n");
+getch();
+}
